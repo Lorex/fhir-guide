@@ -1,14 +1,30 @@
-FHIR 教育訓練相關資源
-===
-
-說明
 ---
-- [如何閱讀本文件]()
+tags: tutorials, FHIR, 中文, 教學
+---
+# FHIR 教育訓練相關資源
 
+[![HL7 FHIR v4.0.1](https://img.shields.io/badge/HL7%20FHIR-v4.0.1-blue)](http://hl7.org/fhir/)
+[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)
+[![GitHub issues](https://img.shields.io/github/issues/Lorex/fhir-guide)](https://github.com/Lorex/fhir-guide/issues)
+[![hackmd-github-sync-badge](https://hackmd.io/r08gAIefT-yvwJj38llfbA/badge)](https://hackmd.io/r08gAIefT-yvwJj38llfbA)
 
+![](https://i.imgur.com/1JPWsWE.png)
+
+## 目錄
 [TOC]
- 
-## 說明：如何閱讀本文件
+
+## 說明
+### 註冊商標聲明
+因應國際健康資訊交換第七層協定協會（HL7® International）之規定，本文件提及的「FHIR®」、「FHIR 標準」、「帶有火焰標示的 HL7 FHIR Logo」是 HL7 的註冊商標，並經由 HL7 許可授權使用。
+
+### 文件授權條款
+本文件為 FHIR 教育訓練的相關資源收錄，並以 **[你他媽的想幹嘛就幹嘛公共授權條款 (WTFPL)](http://www.wtfpl.net/about/)** 發布。惟本文件所連結或參考之各項文獻／圖片／影音素材，其著作權、智慧財產權與授權方式仍依該引用資料本身之規定為準。
+
+本文件使用 HackMD 製作，並依開放原始碼精神將完整內容上傳至 GitHub，歡迎讀者自由提交 Commit 豐富本文內容。
+
+[點我檢視 GitHub Repository](https://github.com/Lorex/fhir-guide)
+
+### 如何閱讀本文件
 FHIR 的官方網站涵蓋了大量且完整的資料，考量到許多不熟悉 FHIR 的新手若直接看官方網站的話可能會望之卻步。為了讓還在新手村的學員們能快速對這個標準上手，因此製作了這份文件。您可以在這份文件中，用（筆者認為）比較有系統性的方式對 FHIR 進行學習。這份文件收錄了筆者從以前到現在發布的各項教材／演講資料以及相關資源／參考連結，由幾個部分組成：
 
 + **參考資料**
@@ -37,7 +53,7 @@ FHIR 的官方網站涵蓋了大量且完整的資料，考量到許多不熟悉
 
 FHIR 是一個仍在不斷發展中的標準，不同時期的的資料可能會因為 FHIR 的標準發展、文件更新而可能有不適用的狀況，筆者會盡量更新這份文件，以維持其準確性。然而仍有可能有疏漏的地方，所有對於 FHIR 標準的規範與解釋，請以 FHIR 官方網站為準。
 
-若您發現本文件有任何有誤的地方，請 Email 至 **Lorex\<ceo@sita.tech>**，我會立即修正有誤的資料。
+若您發現本文件有任何有誤的地方，請 Email 至 **Lorex\<ceo@sita.tech>**，或是直接在 [GitHub](https://github.com/Lorex/fhir-guide) 中提交 Issue，我會立即修正有誤的資料。
 :::
 
 # 參考資料
@@ -128,7 +144,7 @@ FHIR 是一個仍在不斷發展中的標準，不同時期的的資料可能會
 # 情境演練
 :::danger
 **!!!注意!!!**
-本情境演練中提到的各項案例，其未標注或明示「真實案例」者，為筆者基於出題需求自行產生之資料，其中的所有欄位皆屬虛構，如您發現有部分資料雷同，請立即透過 Email：**Lorex\<ceo@sita.tech>** 告知，我將會立即修正雷同的資料。
+本情境演練中提到的各項案例，其未標注或明示「真實案例」者，為筆者基於出題需求自行產生之資料，其中的所有欄位皆屬虛構，如您發現有部分資料雷同，請立即透過 Email：**Lorex\<ceo@sita.tech>** 告知，或是直接在 [GitHub](https://github.com/Lorex/fhir-guide) 中提交 Issue，我將會立即修正雷同的資料。
 
 所有標注「真實案例」的資料，其資料來源為筆者自身的病歷資料，基於教學用途，於抹除個人資料後自願提供作為出題使用。
 
@@ -352,6 +368,8 @@ FHIR 是一個仍在不斷發展中的標準，不同時期的的資料可能會
 
 
 ## 演練 6：撰寫 Profile
+本題目是為了評估您是否掌握 Profile 的相關知識，並是否具備撰寫 Profile 的能力。
+
 FHIR 實作指引（Implementation Guide）與 Profile 是 FHIR 維持一致性這項特性的實踐方式，而 Forge 是一個由 Simplifier.net 發布的 Profile 編輯器。現在請您試著使用該項工具，以任意 Resource 製作出一個自己的 Profile，並滿足以下條件：
 + **必須（SHALL）** 至少包含 3 個欄位的修改。
 + **必須（SHALL）** 在製作的 Profile (StructureDefinition) 中，指定有效的 url 欄位，並在 description 欄位中撰寫您對於本 Profile 的描述。
@@ -363,17 +381,41 @@ FHIR 實作指引（Implementation Guide）與 Profile 是 FHIR 維持一致性�
 
 
 ## 演練 7：程式設計／病患初診資料登錄表單
+本題目是為了評估您是否具備開發基礎的 FHIR 應用程式的能力。
+
 資料來源：[衛生福利部胸腔醫院－初診病患基本資料卡](https://www.ccd.mohw.gov.tw/public/forms/e831aad3547e45eae064a58922202bd5.pdf)
 
 請根據以下表單實作病人資料登錄網頁，必須要能提供以下資料登記（塗掉的欄位不用寫），並能將使用者填寫的資料上傳到 FHIR Server 後，取得 Patient ID 並顯示於頁面中。
 
 ![](https://i.imgur.com/Yvith4A.png)
 
-## 演練 8：程式設計／聯測題目
-
 
 
 # 開源專案
+## FHIR 通用轉換工具：Project F.U.C.K.
+FHIR Universal Conversion Kit (Project F.U.C.K) 是一個通用的 FHIR 資料標準化工具，支援以設定檔及 Low Code 的方式，將任意資料標準化為 FHIR 格式，並具備自動上傳至 FHIR 伺服器的功能。
+
+| Author | License | Source Code 
+| -------- | -------- | ------- |
+| Lorex     | CC BY-NC-SA 3.0 | [GitHub Repository](https://github.com/Lorex/FHIR-Universal-Conversion-Kit)
+
+
+## Burni FHIR Server
+Burni 使用 Node.JS 、Express 框架以及 MongoDB 實作 FHIR R4 Server，經由簡單的設定即可產生指定 FHIR Resource的 Mongoose Schema、API程式碼並可自行更改，滿足需求。目前Burni支援Windows以及Linux，讓開發人員可以快速架設 FHIR Server。 
+
+Burni FHIR Server有別於關聯式資料庫，採用NoSQL架構，目前已100%通過 AEGIS Touchstone Basic-R4-Server驗證測試，包含 2,216測試情境。
+
+| Author | License | Source Code 
+| -------- | -------- | ------- |
+| CYLAB     | Apache 2.0 | [GitHub Repository](https://github.com/Chinlinlee/Burni)
+
+## Raccoon
+Raccoon 是使用 no-SQL 資料庫實作的醫學影像儲存系統(DICOMweb PACS)，目前主要由北護影像資訊學實驗室維護。 Raccoon 使用 MongoDB 管理 DICOM 影像並提供 DICOMweb 以及 FHIR ImagingStudy RESTful API 功能進行儲存、查詢、調閱。 另外 Raccoon 使用了 Burni FHIR Server為底延伸出 FHIR 與 DICOM 結合的功能。
+
+| Author | License | Source Code 
+| -------- | -------- | ------- |
+| CYLAB     | MIT | [GitHub Repository](https://github.com/cylab-tw/raccoon)
+
 # 封存資料
 #### ~~~都更前的~~舊新手村
 + 【~~都更前的~~舊新手村】陽明大學／FHIR 快速跳坑指南
@@ -396,7 +438,7 @@ FHIR 實作指引（Implementation Guide）與 Profile 是 FHIR 維持一致性�
 - 加入新的參考資料
 - 重新編輯情境演練內容，使其符合學習順序
 - 加入新的情境演練內容
-- 
+- 加入開源專案章節
 
 #### 2020-2021
 - 陸續加入了一些參考文件
